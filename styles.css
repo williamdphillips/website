@@ -35,6 +35,17 @@ body {
   color: #0077b5; /* LinkedIn's brand color, a shade of blue */
 }
 
+/* General icon style */
+.fa-stack-overflow {
+  color: #f48024; /* Stack Overflow's brand orange color */
+  transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.fa-stack-overflow:hover {
+  color: #d35e0f; /* Darker shade on hover */
+}
+
 /* Main content area */
 .main {
   padding: 2em 5%;
@@ -142,8 +153,8 @@ body {
 
 /* Image inside project tile */
 .project img {
-  width: 100px; /* Ensure the image fills the tile width */
-  height: 100px; /* Maintain aspect ratio */
+  width: 50px; /* Ensure the image fills the tile width */
+  height: 50px; /* Maintain aspect ratio */
   margin-bottom: 10px; /* Space below image */
 }
 
