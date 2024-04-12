@@ -74,129 +74,109 @@ body {
   margin-top: 0; /* Removes default top margin */
 }
 
-.section#experience {
-  padding: 40px 5%;
-  background-color: #f7f7f7;
-  margin: 20px 0;
-}
-
-.experience-items {
+.experience-section {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center; /* Center the hexagons horizontally */
+  align-items: center; /* Center the hexagons vertically */
+  gap: 10px; /* Adjust as necessary to give space between hexagons */
 }
 
-.experience-item {
+.hexagon {
+  width: 100px;
+  height: 115px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #f0f0f0;
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Aligns items to the start of the flex container */
-  max-width: 800px; /* Limits the width of the experience item */
-  width: 100%;
-  margin: 0 auto;
-  gap: 15px; /* Space between logo and the roles */
-}
-
-.company-logo {
-  width: 100px; /* Fixed width for company logos */
-  height: auto; /* Maintain aspect ratio */
-  margin-top: 0px; /* Aligns top of logo with the first role title */
-}
-
-#pts {
-  width: 70px; /* Fixed width for company logos */
-  height: 70px; /* Maintain aspect ratio */
-  margin-top: 0px; /* Aligns top of logo with the first role title */
-}
-
-.roles {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Space between multiple roles */
-}
-
-.role {
-  background-color: #fff; /* Or any color fitting your design */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px;
-  margin-bottom: 10px; /* Space between roles */
-  position: relative; /* For absolute positioning of dates */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds depth with a subtle shadow */
-  /* ... other styles ... */
-}
-
-.role-header {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 10px; /* Space between the header and the list of responsibilities */
+  margin: 10px; /* Provides space around each hexagon */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+  position: relative; /* Use relative for positioning the date */
 }
 
-.role-date {
-  position: absolute;
-  top: 20px; /* Align with the top padding of role */
-  right: 20px; /* Align with the right padding of role */
-  font-size: 0.85rem;
-  color: #666;
+.hexagon:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  cursor: pointer;
 }
 
-.role-responsibilities {
-  list-style: none; /* Optionally remove bullets */
-  padding: 0;
-  margin: 0;
+.hex-img {
+  max-width: 80%; /* Scale your image to fit within the hexagon */
+  max-height: 80%; /* Scale your image to fit within the hexagon */
 }
 
-.role-responsibilities li {
-  margin-bottom: 10px; /* Space between responsibilities */
+#pts-img {
+  max-width: 60%;
+  max-height: 60%;
 }
 
+/* Projects grid container */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Adjust minmax for tile size */
+  gap: 20px; /* Adjust the gap as needed */
+  padding: 20px; /* Optional: Add padding to the container */
+  justify-content: center; /* Center grid items */
+  align-items: start; /* Align grid items to the top */
 }
 
+/* Individual project tiles */
 .project {
   background-color: #fff;
   border: 1px solid #e1e1e1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center; /* Center-align the text */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: block; /* Ensure the link takes up the entire grid area */
-  color: #333; /* Specify the color you want for the text */
-  text-decoration: none; /* Removes the underline from links */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Rounded corners for tiles */
+  overflow: hidden; /* Ensures nothing spills out of the border radius */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute space inside the tile */
+  align-items: center; /* Center items horizontally */
+  padding: 15px; /* Inner padding for content */
+  transition: transform 0.3s ease;
+  text-align: center; /* Center text */
 }
 
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  color: #000; /* Optional: change color on hover */
-  text-decoration: none; /* Ensure underline does not appear on hover */
-}
-
+/* Image inside project tile */
 .project img {
-  max-width: 100%; /* Ensures image is not wider than its container */
-  max-height: 200px; /* Sets a maximum height for the images */
-  width: auto; /* Maintains the aspect ratio of the image */
-  height: auto; /* Maintains the aspect ratio of the image */
-  margin: 0 auto; /* Centers the image horizontally */
-  display: block; /* Ensures the image is treated as a block-level element */
+  width: 100px; /* Ensure the image fills the tile width */
+  height: 100px; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space below image */
 }
 
-.project h3 {
-  margin-top: 10px; /* Space between image and title */
+.projects a {
+  color: inherit; /* This will make the link color inherit from the parent .project class */
+  text-decoration: none; /* Removes the underline */
 }
 
+.projects a:hover {
+  color: inherit; /* Maintains the color on hover */
+  text-decoration: none; /* Ensures no underline appears on hover */
+}
+
+/* Project title and other text */
+.project h3,
+.project p {
+  margin: 5px 0; /* Vertical margin for text elements */
+}
+
+/* Optional: Project hover effect */
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Tech Stack styling */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
+  align-items: center; /* This aligns items vertically */
+  justify-content: center; /* This centers items horizontally */
   margin-top: 20px;
+  gap: 10px; /* This adds space between items, adjust as necessary */
 }
 
 .tech {
@@ -213,8 +193,8 @@ body {
 }
 
 .tech img {
-  width: 32px; /* Adjust this value as needed */
-  height: 32px; /* Ensure the icons are not too large */
+  width: 48px; /* Adjust this value as needed */
+  height: 48px; /* Ensure the icons are not too large */
   filter: grayscale(100%); /* Makes the icon monochrome */
   transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transition for filter and transform */
 }
@@ -237,4 +217,25 @@ p {
 
 #binaryCode {
   color: #dcdcdc; /* Light gray color, almost blending with the background */
+}
+
+#dynamic-typing:after {
+  content: "|";
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+.done-typing:after {
+  animation: none;
+}
+
+.remove-cursor:after {
+  content: "";
+  display: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }

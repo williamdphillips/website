@@ -9,10 +9,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <script src="scripts.js"></script>
   </head>
   <body>
     <div class="header">
-      <h1>Hi, I'm Drew</h1>
+      <h1 id="dynamic-title">Hi</h1>
+      <script>
+        typeText("dynamic-title", ", I'm Drew", 100, 1000);
+      </script>
       <div class="profile">
         <img src="assets/images/profile.jpg" />
       </div>
@@ -28,132 +32,50 @@
         </a>
       </div>
       <p>Software engineer by day, software engineer by night.</p>
-      <p id="binaryCode">
-        01101000 01100101 01101100 01101100 01101111 00100000 01110111 01101111
-        01110010 01101100 01100100
-      </p>
+      <p id="binaryCode"></p>
+      <script>
+        typeText(
+          "binaryCode",
+          "01101000 01100101 01101100 01101100 01101111 00100000 01110111 01101111 01110010 01101100 01100100",
+          100,
+          1000
+        );
+      </script>
     </div>
 
     <div class="section" id="experience">
       <h2 class="section-title">Experience</h2>
-      <div class="experience-items">
-        <div class="experience-item">
+      <div class="experience-section">
+        <div
+          class="hexagon"
+          id="company1"
+          onclick="location.href='company1-details.html';"
+        >
           <img
             src="assets/images/deloitte.svg"
-            alt="Company 1 Logo"
-            class="company-logo"
+            alt="Deloitte"
+            class="hex-img"
           />
-          <div class="roles">
-            <div class="role">
-              <div class="role-header">
-                <h3 class="role-title">Lead Software Engineer</h3>
-                <span class="role-date">Jun 2023 to Present</span>
-              </div>
-              <ul class="role-responsibilities">
-                <li>
-                  Technical lead for 14 data engineers working on a variety of
-                  solutions including custom deployment code, python libraries,
-                  scala libraries, and notebooks
-                </li>
-                <li>
-                  Databricks SME for project spanning 3 regions and 15+
-                  environments including deployment, configuration, and failover
-                </li>
-                <li>
-                  Guiding team members on best practices for developing
-                  applications for distributed computing on Spark through
-                  troubleshooting sessions and PR reviews
-                </li>
-              </ul>
-            </div>
-            <div class="role">
-              <div class="role-header">
-                <h3 class="role-title">Senior Software Engineer</h3>
-                <span class="role-date">Feb 2022 to Jun 2023</span>
-              </div>
-              <ul class="role-responsibilities">
-                <li>
-                  Successfully designed and developed a Python library to
-                  provide isolation controls for accessing client data now used
-                  by over 100 auditors per day in production during busy season
-                  with positive feedback
-                </li>
-                <li>
-                  Developed .NET job processing solution for project servicing
-                  1k jobs per day in production
-                </li>
-                <li>
-                  Created custom Daatabricks deployment solution to facilitate
-                  deployments reliable across 50+ workspaces
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
-        <div class="experience-item">
-          <img
-            src="assets/images/ubs.svg"
-            alt="Company 2 Logo"
-            class="company-logo"
-          />
-          <div class="roles">
-            <div class="role">
-              <div class="role-header">
-                <h3 class="role-title">
-                  Information Technology Software Engineer
-                </h3>
-                <span class="role-date">Oct 2020 to Feb 2022</span>
-              </div>
-              <ul class="role-responsibilities">
-                <li>
-                  Developed data pipelines on Databricks using Apache Spark on
-                  Databricks with 10x improvement over previous versions
-                </li>
-                <li>
-                  Developed and maintained microservices such as lightweight
-                  applications serving Spring-based APIs
-                </li>
-                <li>
-                  Created ETL and batch-processing solutions for data with
-                  millions of rows with low SLAs
-                </li>
-              </ul>
-            </div>
-            <!-- Add more roles as needed -->
-          </div>
+        <div
+          class="hexagon"
+          id="company2"
+          onclick="location.href='company2-details.html';"
+        >
+          <img src="assets/images/ubs.svg" alt="UBS" class="hex-img" />
         </div>
-        <div class="experience-item">
+        <div
+          class="hexagon"
+          id="company3"
+          onclick="location.href='company3-details.html';"
+        >
           <img
-            id="pts"
+            id="pts-img"
             src="assets/images/pts.ico"
-            alt="Company 3 Logo"
-            class="company-logo"
+            alt="PTS"
+            class="hex-img"
           />
-          <div class="roles">
-            <div class="role">
-              <div class="role-header">
-                <h3 class="role-title">Consultant Software Engineer</h3>
-                <span class="role-date">Jan 2017 to Feb 2022</span>
-              </div>
-              <ul class="role-responsibilities">
-                <li>
-                  Developed custom web scraping tool using selenium to retrieve
-                  100+ leads for local shutter sales business
-                </li>
-                <li>
-                  Created custom order processing tool for Etsy using Java to
-                  help facilitate 1k monthly transactions for a poster business
-                </li>
-                <li>
-                  Created custom websites for clients using a mix of vanilla
-                  JavaScript, HTML, and CSS
-                </li>
-              </ul>
-            </div>
-            <!-- Add more roles as needed -->
-          </div>
         </div>
-        <!-- Add more experience items as needed -->
       </div>
     </div>
 
