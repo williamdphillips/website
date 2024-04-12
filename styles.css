@@ -1,0 +1,240 @@
+/* Overall body and layout styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header and Footer */
+.header,
+.footer {
+  text-align: center;
+  padding: 2em 5%;
+  background-color: #f8f8f7;
+  color: #1d1d1f;
+  margin-bottom: 20px; /* Adds bottom margin to header */
+}
+
+.social-icons a {
+  color: inherit; /* Prevents the icons from inheriting the default link color */
+  text-decoration: none; /* Removes the underline */
+}
+
+.social-icons a:hover {
+  opacity: 0.8; /* Adds a hover effect to indicate interactivity */
+}
+
+.fab.fa-github {
+  color: #333; /* GitHub's icon color, typically black or a shade of dark gray */
+}
+
+.fab.fa-linkedin {
+  color: #0077b5; /* LinkedIn's brand color, a shade of blue */
+}
+
+/* Main content area */
+.main {
+  padding: 2em 5%;
+}
+
+.profile {
+  display: flex;
+  justify-content: center; /* Center horizontally in the container */
+  align-items: center; /* Center vertically in the container */
+  width: 100%; /* Take full width to center content */
+  height: auto; /* Height can be auto if not specified */
+  margin: 20px 0; /* Add some margin around the profile */
+}
+
+.profile img {
+  width: 200px; /* Set the width of the image */
+  height: 200px; /* Set the height of the image to be the same as the width */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+}
+
+.section-title {
+  text-align: center;
+  margin: 40px 0 20px; /* Adjust top and bottom margins as needed */
+  padding: 0 5%; /* Match the horizontal padding of the sections */
+  font-size: 2rem; /* Optional: Adjust the font size as desired */
+  /* Additional styling as needed */
+}
+
+.section {
+  padding: 20px 5%;
+  background-color: #f7f7f7;
+  margin-top: 20px;
+}
+
+.section h2 {
+  margin-top: 0; /* Removes default top margin */
+}
+
+.section#experience {
+  padding: 40px 5%;
+  background-color: #f7f7f7;
+  margin: 20px 0;
+}
+
+.experience-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns items to the start of the flex container */
+  max-width: 800px; /* Limits the width of the experience item */
+  width: 100%;
+  margin: 0 auto;
+  gap: 15px; /* Space between logo and the roles */
+}
+
+.company-logo {
+  width: 100px; /* Fixed width for company logos */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 0px; /* Aligns top of logo with the first role title */
+}
+
+#pts {
+  width: 70px; /* Fixed width for company logos */
+  height: 70px; /* Maintain aspect ratio */
+  margin-top: 0px; /* Aligns top of logo with the first role title */
+}
+
+.roles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between multiple roles */
+}
+
+.role {
+  background-color: #fff; /* Or any color fitting your design */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  margin-bottom: 10px; /* Space between roles */
+  position: relative; /* For absolute positioning of dates */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds depth with a subtle shadow */
+  /* ... other styles ... */
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Space between the header and the list of responsibilities */
+}
+
+.role-date {
+  position: absolute;
+  top: 20px; /* Align with the top padding of role */
+  right: 20px; /* Align with the right padding of role */
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.role-responsibilities {
+  list-style: none; /* Optionally remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.role-responsibilities li {
+  margin-bottom: 10px; /* Space between responsibilities */
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center; /* Center-align the text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block; /* Ensure the link takes up the entire grid area */
+  color: #333; /* Specify the color you want for the text */
+  text-decoration: none; /* Removes the underline from links */
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  color: #000; /* Optional: change color on hover */
+  text-decoration: none; /* Ensure underline does not appear on hover */
+}
+
+.project img {
+  max-width: 100%; /* Ensures image is not wider than its container */
+  max-height: 200px; /* Sets a maximum height for the images */
+  width: auto; /* Maintains the aspect ratio of the image */
+  height: auto; /* Maintains the aspect ratio of the image */
+  margin: 0 auto; /* Centers the image horizontally */
+  display: block; /* Ensures the image is treated as a block-level element */
+}
+
+.project h3 {
+  margin-top: 10px; /* Space between image and title */
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Tech Stack styling */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tech {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.tech:hover {
+  background-color: #f0f0f0;
+}
+
+.tech img {
+  width: 32px; /* Adjust this value as needed */
+  height: 32px; /* Ensure the icons are not too large */
+  filter: grayscale(100%); /* Makes the icon monochrome */
+  transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transition for filter and transform */
+}
+
+.tech:hover img {
+  filter: none; /* Removes the grayscale filter on hover */
+  transform: scale(1.1); /* Optionally scale the icon up slightly on hover */
+}
+
+/* Responsive typography */
+h1,
+h2 {
+  font-weight: normal;
+  color: #1d1d1f;
+}
+
+p {
+  color: #6e6e73;
+}
+
+#binaryCode {
+  color: #dcdcdc; /* Light gray color, almost blending with the background */
+}

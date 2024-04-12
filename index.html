@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Hi, I'm Drew</h1>
+      <div class="profile">
+        <img src="assets/images/profile.jpg" />
+      </div>
+      <div class="social-icons">
+        <a href="https://github.com/williamdphillips" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/williamdrewphillips"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <p>Software engineer by day, software engineer by night.</p>
+      <p id="binaryCode">
+        01101000 01100101 01101100 01101100 01101111 00100000 01110111 01101111
+        01110010 01101100 01100100
+      </p>
+    </div>
+
+    <div class="section" id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="experience-items">
+        <div class="experience-item">
+          <img
+            src="assets/images/deloitte.svg"
+            alt="Company 1 Logo"
+            class="company-logo"
+          />
+          <div class="roles">
+            <div class="role">
+              <div class="role-header">
+                <h3 class="role-title">Lead Software Engineer</h3>
+                <span class="role-date">Jun 2023 to Present</span>
+              </div>
+              <ul class="role-responsibilities">
+                <li>
+                  Technical lead for 14 data engineers working on a variety of
+                  solutions including custom deployment code, python libraries,
+                  scala libraries, and notebooks
+                </li>
+                <li>
+                  Databricks SME for project spanning 3 regions and 15+
+                  environments including deployment, configuration, and failover
+                </li>
+                <li>
+                  Guiding team members on best practices for developing
+                  applications for distributed computing on Spark through
+                  troubleshooting sessions and PR reviews
+                </li>
+              </ul>
+            </div>
+            <div class="role">
+              <div class="role-header">
+                <h3 class="role-title">Senior Software Engineer</h3>
+                <span class="role-date">Feb 2022 to Jun 2023</span>
+              </div>
+              <ul class="role-responsibilities">
+                <li>
+                  Successfully designed and developed a Python library to
+                  provide isolation controls for accessing client data now used
+                  by over 100 auditors per day in production during busy season
+                  with positive feedback
+                </li>
+                <li>
+                  Developed .NET job processing solution for project servicing
+                  1k jobs per day in production
+                </li>
+                <li>
+                  Created custom Daatabricks deployment solution to facilitate
+                  deployments reliable across 50+ workspaces
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="experience-item">
+          <img
+            src="assets/images/ubs.svg"
+            alt="Company 2 Logo"
+            class="company-logo"
+          />
+          <div class="roles">
+            <div class="role">
+              <div class="role-header">
+                <h3 class="role-title">
+                  Information Technology Software Engineer
+                </h3>
+                <span class="role-date">Oct 2020 to Feb 2022</span>
+              </div>
+              <ul class="role-responsibilities">
+                <li>
+                  Developed data pipelines on Databricks using Apache Spark on
+                  Databricks with 10x improvement over previous versions
+                </li>
+                <li>
+                  Developed and maintained microservices such as lightweight
+                  applications serving Spring-based APIs
+                </li>
+                <li>
+                  Created ETL and batch-processing solutions for data with
+                  millions of rows with low SLAs
+                </li>
+              </ul>
+            </div>
+            <!-- Add more roles as needed -->
+          </div>
+        </div>
+        <div class="experience-item">
+          <img
+            id="pts"
+            src="assets/images/pts.ico"
+            alt="Company 3 Logo"
+            class="company-logo"
+          />
+          <div class="roles">
+            <div class="role">
+              <div class="role-header">
+                <h3 class="role-title">Consultant Software Engineer</h3>
+                <span class="role-date">Jan 2017 to Feb 2022</span>
+              </div>
+              <ul class="role-responsibilities">
+                <li>
+                  Developed custom web scraping tool using selenium to retrieve
+                  100+ leads for local shutter sales business
+                </li>
+                <li>
+                  Created custom order processing tool for Etsy using Java to
+                  help facilitate 1k monthly transactions for a poster business
+                </li>
+                <li>
+                  Created custom websites for clients using a mix of vanilla
+                  JavaScript, HTML, and CSS
+                </li>
+              </ul>
+            </div>
+            <!-- Add more roles as needed -->
+          </div>
+        </div>
+        <!-- Add more experience items as needed -->
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <a href="project1.html" class="project">
+          <img src="assets/images/databricks_1.svg" alt="Project 1 Thumbnail" />
+          <h3>Project 1</h3>
+        </a>
+        <a href="project2.html" class="project">
+          <img src="assets/images/databricks_1.svg" alt="Project 2 Thumbnail" />
+          <h3>Project 2</h3>
+        </a>
+        <a href="project3.html" class="project">
+          <img src="assets/images/databricks_1.svg" alt="Project 3 Thumbnail" />
+          <h3>Project 3</h3>
+        </a>
+        <a href="project4.html" class="project">
+          <img src="assets/images/databricks_1.svg" alt="Project 4 Thumbnail" />
+          <h3>Project 4</h3>
+        </a>
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="tech-stack">
+        <div class="tech" title="Python">
+          <img src="assets/icons/tech/python.svg" alt="Python" />
+        </div>
+        <div class="tech" title="Flask">
+          <img src="assets/icons/tech/flask.svg" alt="Flask" />
+        </div>
+        <div class="tech" title="C#">
+          <img src="assets/icons/tech/c-sharp.svg" alt="C#" />
+        </div>
+        <div class="tech" title="Scala">
+          <img src="assets/icons/tech/scala.svg" alt="Scala" />
+        </div>
+        <div class="tech" title="Java">
+          <img src="assets/icons/tech/java.svg" alt="Java" />
+        </div>
+        <div class="tech" title="Spark">
+          <img src="assets/icons/tech/spark.svg" alt="Spark" />
+        </div>
+        <div class="tech" title="Databricks">
+          <img src="assets/icons/tech/databricks_1.svg" alt="Databricks" />
+        </div>
+        <div class="tech" title="Hadoop">
+          <img src="assets/icons/tech/hadoop.svg" alt="Hadoop" />
+        </div>
+        <div class="tech" title="Azure">
+          <img src="assets/icons/tech/azure.svg" alt="Azure" />
+        </div>
+        <div class="tech" title="AWS">
+          <img src="assets/icons/tech/aws.svg" alt="AWS" />
+        </div>
+        <div class="tech" title="HTML5">
+          <img src="assets/icons/tech/html5.svg" alt="HTML5" />
+        </div>
+        <div class="tech" title="CSS">
+          <img src="assets/icons/tech/css.svg" alt="CSS" />
+        </div>
+        <div class="tech" title="Javascript">
+          <img src="assets/icons/tech/javascript.svg" alt="Javascript" />
+        </div>
+        <div class="tech" title="Docker">
+          <img src="assets/icons/tech/docker.svg" alt="Docker" />
+        </div>
+        <div class="tech" title="Kubernetes">
+          <img src="assets/icons/tech/kubernetes.svg" alt="Kubernetes" />
+        </div>
+        <div class="tech" title="Azure DevOps">
+          <img src="assets/icons/tech/azure-devops.svg" alt="Azure DevOps" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Tools</h2>
+      <div class="tech-stack">
+        <div class="tech" title="PyCharm">
+          <img src="assets/icons/tools/pycharm.svg" alt="PyCharm" />
+        </div>
+        <div class="tech" title="IntelliJ">
+          <img src="assets/icons/tools/intellij.svg" alt="IntelliJ" />
+        </div>
+        <div class="tech" title="Webstorm">
+          <img src="assets/icons/tools/webstorm.svg" alt="Webstorm" />
+        </div>
+        <div class="tech" title="Figma">
+          <img src="assets/icons/tools/figma.svg" alt="Figma" />
+        </div>
+        <div class="tech" title="Postman">
+          <img src="assets/icons/tools/postman.svg" alt="Postman" />
+        </div>
+        <div class="tech" title="Swagger">
+          <img src="assets/icons/tools/swagger.svg" alt="Swagger" />
+        </div>
+        <div class="tech" title="Studo3T">
+          <img src="assets/icons/tools/studio3t.svg" alt="Studio3T" />
+        </div>
+        <div class="tech" title="Notepad++">
+          <img src="assets/icons/tools/notepad++.svg" alt="Notepad++" />
+        </div>
+        <div class="tech" title="chatgpt">
+          <img src="assets/icons/tools/chatgpt.svg" alt="chatgpt" />
+        </div>
+        <div class="tech" title="Github">
+          <img src="assets/icons/tools/github.svg" alt="Github" />
+        </div>
+        <div class="tech" title="Windows">
+          <img src="assets/icons/tools/windows.svg" alt="Windows" />
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>william.phillips21@outlook.com</p>
+    </div>
+  </body>
+</html>
